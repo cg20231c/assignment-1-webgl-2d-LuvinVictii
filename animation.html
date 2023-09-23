@@ -47,22 +47,39 @@
         let rectangleColor = [0.0, 0.0, 1.0, 1.0]; // Blue color (RGBA)
 
         function render() {
-            gl.clearColor(0.0, 0.0, 0.0, 1.0);
-            gl.clear(gl.COLOR_BUFFER_BIT);
-
             gl.uniform4fv(colorUniformLocation, rectangleColor); // Set the rectangle color
 
             if (isUsingLines) {
+                gl.clearColor(1.0, 1.0, 1.0, 1.0);
+                gl.clear(gl.COLOR_BUFFER_BIT);
                 // Define vertices for a rectangle using LINES
                 const vertices = new Float32Array([
-                    -0.5, -0.5,
-                     0.5, -0.5,
-                     0.5, -0.5,
-                     0.5,  0.5,
-                     0.5,  0.5,
-                    -0.5,  0.5,
-                    -0.5,  0.5,
-                    -0.5, -0.5,
+                    -0.7,  0.6,
+                    -0.3,  0.6,
+                    -0.3,  0.6,
+                    -0.3, -0.2,
+                    -0.3, -0.2,
+                    -0.7, -0.6,
+                    -0.7, -0.6,
+                    -0.7,  0.6,
+
+                    -0.2,  0.4,
+                     0.0,  0.6,
+                     0.0,  0.6,
+                     0.2,  0.4,
+                     0.2,  0.4,
+                     0.2, -0.6,
+                     0.2,  0.0,
+                    -0.2,  0.0,
+                    -0.2,  0.4,
+                    -0.2, -0.6,
+
+                     0.3,  0.6,
+                     0.7,  0.6,
+                     0.3,  0.6,
+                     0.3, -0.6,
+                     0.3,  0.0,
+                     0.55, 0.0
                 ]);
 
                 const positionBuffer = gl.createBuffer();
@@ -72,8 +89,10 @@
                 gl.enableVertexAttribArray(positionAttributeLocation);
                 gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
 
-                gl.drawArrays(gl.LINES, 0, 8); // Use gl.LINES to draw the rectangle with lines
+                gl.drawArrays(gl.LINES, 0, 100); // Use gl.LINES to draw the rectangle with lines
             } else {
+                gl.clearColor(0.0157, 0.0118, 0.0941, 1.0);
+                gl.clear(gl.COLOR_BUFFER_BIT);
                 // Define vertices for a rectangle using TRIANGLES
                 const vertices = new Float32Array([
                     -0.5, -0.5,
@@ -98,9 +117,9 @@
             setTimeout(() => {
                 isUsingLines = !isUsingLines;
                 if (isUsingLines) {
-                    rectangleColor = [0.0, 0.0, 1.0, 1.0]; // Blue for lines
+                    rectangleColor = [0.0157, 0.0118, 0.0941, 1.0]; // Blue for lines
                 } else {
-                    rectangleColor = [1.0, 0.0, 0.0, 1.0]; // Red for triangles
+                    rectangleColor = [1.0, 1.0, 1.0, 1.0]; // Red for triangles
                 }
                 requestAnimationFrame(render);
             }, 3000);
