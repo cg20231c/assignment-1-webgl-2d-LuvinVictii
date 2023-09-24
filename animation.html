@@ -95,12 +95,82 @@
                 gl.clear(gl.COLOR_BUFFER_BIT);
                 // Define vertices for a rectangle using TRIANGLES
                 const vertices = new Float32Array([
-                    -0.5, -0.5,
-                     0.5, -0.5,
-                     0.5,  0.5,
-                    -0.5, -0.5,
-                     0.5,  0.5,
-                    -0.5,  0.5,
+                    // D                    
+                    -0.7,   0.6,
+                    -0.7,  -0.5,
+                    -0.65, -0.5,
+                    -0.65, -0.5,
+                    -0.7,   0.6,
+                    -0.65,  0.6,
+
+                    -0.7,   0.6,
+                    -0.7,   0.5,
+                    -0.3,   0.6,
+                    -0.3,   0.6,
+                    -0.3,   0.5,
+                    -0.7,   0.5,
+
+                    -0.3,   0.6,
+                    -0.3,  -0.2,
+                    -0.35, -0.2,
+                    -0.35, -0.2,
+                    -0.3,   0.6,
+                    -0.35,  0.6,
+
+                    -0.3,  -0.0882,
+                    -0.3,  -0.2,
+                    -0.7,  -0.6,
+                    -0.7,  -0.6,
+                    -0.7,  -0.4882,
+                    -0.3,  -0.0882,
+
+                    // A
+                    -0.2,  -0.6,
+                    -0.2,   0.4,
+                    -0.15, -0.6,
+                    -0.15, -0.6,
+                    -0.15,  0.4,
+                    -0.2,   0.4,
+
+                     0.2,  -0.6,
+                     0.2,   0.4,
+                     0.15, -0.6,
+                     0.15, -0.6,
+                     0.15,  0.4,
+                     0.2,   0.4,
+
+                    -0.2,   0.4,
+                     0.0,   0.6,
+                     0.2,   0.4,
+
+                    -0.2,   0.0,
+                    -0.2,   0.1,
+                     0.2,   0.0,
+                     0.2,   0.0,
+                     0.2,   0.1,
+                    -0.2,   0.1,
+
+                    // F
+                     0.3,   0.6,
+                     0.3,  -0.6,
+                     0.35, -0.6,
+                     0.35, -0.6,
+                     0.35,  0.6,
+                     0.3,   0.6,
+
+                     0.3,   0.6,
+                     0.7,   0.6,
+                     0.7,   0.5,
+                     0.7,   0.5,
+                     0.3,   0.6,
+                     0.3,   0.5,
+
+                     0.3,   0.0,
+                     0.3,   0.1,
+                     0.55,  0.0,
+                     0.55,  0.0,
+                     0.55,  0.1,
+                     0.3,   0.1
                 ]);
 
                 const positionBuffer = gl.createBuffer();
@@ -110,7 +180,7 @@
                 gl.enableVertexAttribArray(positionAttributeLocation);
                 gl.vertexAttribPointer(positionAttributeLocation, 2, gl.FLOAT, false, 0, 0);
 
-                gl.drawArrays(gl.TRIANGLES, 0, 6); // Use gl.TRIANGLES to draw the rectangle with triangles
+                gl.drawArrays(gl.TRIANGLES, 0, 100); // Use gl.TRIANGLES to draw the rectangle with triangles
             }
 
             // Toggle between drawing modes every 3 seconds
