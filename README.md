@@ -2,10 +2,10 @@
 > Muhammad Daffa Harits<br> 5025211005
 
 ## Penjelasan file
-1. lines.html adalah file percobaan membuat rectangle menggunakan gl.LINES
-2. triangles.html adalah file percobaan membuat rectangle menggunakan gl.TRIANGLE
-3. animation.html adalah file percobaan membuat animasi menggunakan file triangles.html dan lines.html yang di-merge
-4. index.html adlaah file hasil akhir
+1. index.html adalah file referensi dari kode contoh
+2. lines.html adalah file percobaan membuat rectangle menggunakan gl.LINES
+3. triangles.html adalah file percobaan membuat rectangle menggunakan gl.TRIANGLE
+4. animation.html adalah file merge dari lines.html dan triangles.html, lalu ditambah animasi sesuai instruksi
 
 ## Tahap pengerjaan
 
@@ -24,6 +24,9 @@ Saya memasukkan titik koordinat sesuai ilustrasi untuk tugas gl.LINES. Lalu saya
 
 ### DEADLINE
 Saya minta maaf Pak Hadziq, saya tidak dapat menyelesaikan tugas dengan baik sebelum deadline dikarenakan baterai laptop saya habis, sedangkan saya sedang acara penjagaan bendera wisuda semalam. Saya sudah meng-commit tugas saya sampai progress nomer 4 sebelum deadline. Saya akan kerjakan sisanya dan commit setelahnya
+
+### 5. Finishing kode bagian 2
+Saya menggunakan sebagian besar titik koordinat yang sama di ilustrasi agar bentuknya tetap bagus. Lalu saya gunakan gl.TRIANGLES. Untuk warna tidak saya otak atik karna sudah saya ubah sejak langkah 4
 
 ## Conversation with ChatGPT
 Berikut link obrolan saya dan chatGPT dalam pengerjaan tugas ini
